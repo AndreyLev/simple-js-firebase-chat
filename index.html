@@ -1,0 +1,73 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Chat Page</title>
+</head>
+<body>
+    <!-- html markup begins -->
+    <div class="chat-page">
+        <div class="container">
+            <div class="chat-title">
+                ЧАТ
+            </div>
+
+            <div class="chat-container">
+                <form class="form name-form" action="#">
+                    <div class="form-content">
+                        <div class="form-prepend">Ваше имя:</div>
+                        <input class="form-input" name="name" type="text" placeholder="" required>
+                        <div class="form-append">
+                            <input class="form-input-button" type="submit" value="Отправить">
+                        </div>
+                    </div>
+                </form>
+
+                <div class="chat-box">
+                    <div class="chat-box-title">Сообщения</div>
+                    <div class="chat-box-content">
+                        <!-- THERE IS MESSAGE INJECT IN HERE-->
+                    </div>
+                </div>
+
+                <form class="form new-chat-form" action="#">
+                    <div class="form-content">
+                        <div class="form-prepend">Сообщение:</div>
+                        <input class="form-input" name="message" type="text" placeholder="" required>
+                        <div class="form-append">
+                            <input class="form-input-button" type="submit" value="Отправить">
+                        </div>
+                    </div>
+                </form>
+            </div><!-- ./chat-container -->
+        </div>
+    </div>
+    <!-- html markup end -->
+
+<script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+<script>
+    var firebaseConfig = {
+    apiKey: "AIzaSyAx12eiHbmI90CPfthl9IZLqZGlzGq1sZ0",
+    authDomain: "my-web-project-d5b40.firebaseapp.com",
+    databaseURL: "https://my-web-project-d5b40.firebaseio.com",
+    projectId: "my-web-project-d5b40",
+    storageBucket: "my-web-project-d5b40.appspot.com",
+    messagingSenderId: "993120488876",
+    appId: "1:993120488876:web:91222fdb6d36b78be7fe09",
+    measurementId: "G-R16DG2MTH9"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db = firebase.firestore();
+</script>
+<script src="scripts/chat.js"></script>
+<script src="scripts/ui.js"></script>
+<script src="scripts/app.js"></script>
+</body>
+</html>
