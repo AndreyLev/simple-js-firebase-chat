@@ -273,14 +273,35 @@ Media
         height: 47px;
         border-radius: 10px 0 0 10px;
     }
-}
 
-@media (max-width: 375px) {
+    .name-form {
+        margin: 0 auto;
+    }
+    
+   .chat-box {
+       margin-top: 5px;
+   }
+   
+   form:last-child {
+    margin-top: 5px;
+   }
 
+    .chat-page {
+        margin-top: 5px;
+    }
 
     .form-input {
-        width: 80%;
+        flex-grow: 1;
         font-size: 1rem;
     }
 
+    
 }
+
+@media (max-width: 375px) {
+    .form-input { 
+        width: 80%;
+    }
+}
+
+
